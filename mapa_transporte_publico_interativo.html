@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_4fa776d771e84ef649cedd6503d2c2cb {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+    <script src="https://cdn.jsdelivr.net/gh/marslan390/BeautifyMarker/leaflet-beautify-marker-icon.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/marslan390/BeautifyMarker/leaflet-beautify-marker-icon.min.css"/>
+</head>
+<body>
+    
+    
+     <div style="position: fixed; 
+                 bottom: 50px; left: 50px; width: 320px; height: 280px; 
+                 background-color: white; border:2px solid grey; z-index:9999; font-size:14px; padding: 10px;">
+     <strong>Legenda</strong><br>
+     <span style="color:#808080;">&#9679;</span> Centros Logísticos Prologis <br>
+     <span style="color:#FF5733;">&#8212;&#8212;&#8212;</span> Linha CPTM <br>
+     <span style="color:#9B59B6;">&#8212;&#8212;&#8212;</span> VLT <br>
+     <span style="color:#27AE60;">&#8212;&#8212;&#8212;</span> Ciclovia <br>
+     </div>
+    
+            <div class="folium-map" id="map_4fa776d771e84ef649cedd6503d2c2cb" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_4fa776d771e84ef649cedd6503d2c2cb = L.map(
+                "map_4fa776d771e84ef649cedd6503d2c2cb",
+                {
+                    center: [-23.5, -46.9],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 11,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_802fdbf0fa7828df75c8bc85abec3b81 = L.tileLayer(
+                "https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"http://cartodb.com/attributions\"\u003eCartoDB\u003c/a\u003e, CartoDB \u003ca href =\"http://cartodb.com/attributions\"\u003eattributions\u003c/a\u003e", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_4fa776d771e84ef649cedd6503d2c2cb);
+        
+    
+            var feature_group_6019d6d3e5b3943e8f70cef822aaaee3 = L.featureGroup(
+                {}
+            ).addTo(map_4fa776d771e84ef649cedd6503d2c2cb);
+        
+    
+            var marker_a424028861736b6c5ef049fadbb36b27 = L.marker(
+                [-23.3775, -46.8781],
+                {}
+            ).addTo(feature_group_6019d6d3e5b3943e8f70cef822aaaee3);
+        
+    
+            var beautify_icon_28558fc474521287e3afbba99d01898f = new L.BeautifyIcon.icon(
+                {"backgroundColor": "#808080", "borderColor": "#FFFFFF", "borderWidth": 3, "icon": "industry", "iconShape": "marker", "innerIconStyle": "", "isAlphaNumericIcon": false, "spin": false, "textColor": "#000"}
+            )
+            marker_a424028861736b6c5ef049fadbb36b27.setIcon(beautify_icon_28558fc474521287e3afbba99d01898f);
+        
+    
+        var popup_0de417d0db268aa0c55698764e0356ae = L.popup({"maxWidth": "100%"});
+
+        
+            var html_aecdb5b3b39490680773f0a038751350 = $(`<div id="html_aecdb5b3b39490680773f0a038751350" style="width: 100.0%; height: 100.0%;"><strong>Prologis Cajamar I</strong></div>`)[0];
+            popup_0de417d0db268aa0c55698764e0356ae.setContent(html_aecdb5b3b39490680773f0a038751350);
+        
+
+        marker_a424028861736b6c5ef049fadbb36b27.bindPopup(popup_0de417d0db268aa0c55698764e0356ae)
+        ;
+
+        
+    
+    
+            var marker_0b13ad49efcb6ab4b7ea11d9a05d175f = L.marker(
+                [-23.377, -46.8795],
+                {}
+            ).addTo(feature_group_6019d6d3e5b3943e8f70cef822aaaee3);
+        
+    
+            var beautify_icon_d82eeb92ab82ed384826ec1d9433aa91 = new L.BeautifyIcon.icon(
+                {"backgroundColor": "#808080", "borderColor": "#FFFFFF", "borderWidth": 3, "icon": "industry", "iconShape": "marker", "innerIconStyle": "", "isAlphaNumericIcon": false, "spin": false, "textColor": "#000"}
+            )
+            marker_0b13ad49efcb6ab4b7ea11d9a05d175f.setIcon(beautify_icon_d82eeb92ab82ed384826ec1d9433aa91);
+        
+    
+        var popup_683c470ac31390a0a2843a309c2fbadb = L.popup({"maxWidth": "100%"});
+
+        
+            var html_163fae88bc4e1d5d354da0d8b642ccb1 = $(`<div id="html_163fae88bc4e1d5d354da0d8b642ccb1" style="width: 100.0%; height: 100.0%;"><strong>Prologis Cajamar II</strong></div>`)[0];
+            popup_683c470ac31390a0a2843a309c2fbadb.setContent(html_163fae88bc4e1d5d354da0d8b642ccb1);
+        
+
+        marker_0b13ad49efcb6ab4b7ea11d9a05d175f.bindPopup(popup_683c470ac31390a0a2843a309c2fbadb)
+        ;
+
+        
+    
+    
+            var marker_3026baf0d72cb79e9ee8aa933af6479d = L.marker(
+                [-23.3778, -46.88],
+                {}
+            ).addTo(feature_group_6019d6d3e5b3943e8f70cef822aaaee3);
+        
+    
+            var beautify_icon_d8debf828874f051106c47eae473abb6 = new L.BeautifyIcon.icon(
+                {"backgroundColor": "#808080", "borderColor": "#FFFFFF", "borderWidth": 3, "icon": "industry", "iconShape": "marker", "innerIconStyle": "", "isAlphaNumericIcon": false, "spin": false, "textColor": "#000"}
+            )
+            marker_3026baf0d72cb79e9ee8aa933af6479d.setIcon(beautify_icon_d8debf828874f051106c47eae473abb6);
+        
+    
+        var popup_dee66596a072aee72bd015ef90b3eb8b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_2cae5a82974066eec2a87f5bf880690b = $(`<div id="html_2cae5a82974066eec2a87f5bf880690b" style="width: 100.0%; height: 100.0%;"><strong>Prologis Cajamar 3500</strong></div>`)[0];
+            popup_dee66596a072aee72bd015ef90b3eb8b.setContent(html_2cae5a82974066eec2a87f5bf880690b);
+        
+
+        marker_3026baf0d72cb79e9ee8aa933af6479d.bindPopup(popup_dee66596a072aee72bd015ef90b3eb8b)
+        ;
+
+        
+    
+    
+            var marker_b8dd055e343edfd5182ff6b173726c59 = L.marker(
+                [-23.435, -47.06],
+                {}
+            ).addTo(feature_group_6019d6d3e5b3943e8f70cef822aaaee3);
+        
+    
+            var beautify_icon_76fe7ea6ed12e179335d0790c469d9e4 = new L.BeautifyIcon.icon(
+                {"backgroundColor": "#808080", "borderColor": "#FFFFFF", "borderWidth": 3, "icon": "industry", "iconShape": "marker", "innerIconStyle": "", "isAlphaNumericIcon": false, "spin": false, "textColor": "#000"}
+            )
+            marker_b8dd055e343edfd5182ff6b173726c59.setIcon(beautify_icon_76fe7ea6ed12e179335d0790c469d9e4);
+        
+    
+        var popup_f64ff9345deed2584af2345d612e68c6 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_59211644c6482bbfa5b0bd1e54633e89 = $(`<div id="html_59211644c6482bbfa5b0bd1e54633e89" style="width: 100.0%; height: 100.0%;"><strong>Prologis Castelo 46</strong></div>`)[0];
+            popup_f64ff9345deed2584af2345d612e68c6.setContent(html_59211644c6482bbfa5b0bd1e54633e89);
+        
+
+        marker_b8dd055e343edfd5182ff6b173726c59.bindPopup(popup_f64ff9345deed2584af2345d612e68c6)
+        ;
+
+        
+    
+    
+            var marker_b6ca5b811b824857f82cd905b3ff6540 = L.marker(
+                [-23.443, -46.927],
+                {}
+            ).addTo(feature_group_6019d6d3e5b3943e8f70cef822aaaee3);
+        
+    
+            var beautify_icon_6b82e2dec781bca1d5c5e3945d271171 = new L.BeautifyIcon.icon(
+                {"backgroundColor": "#808080", "borderColor": "#FFFFFF", "borderWidth": 3, "icon": "industry", "iconShape": "marker", "innerIconStyle": "", "isAlphaNumericIcon": false, "spin": false, "textColor": "#000"}
+            )
+            marker_b6ca5b811b824857f82cd905b3ff6540.setIcon(beautify_icon_6b82e2dec781bca1d5c5e3945d271171);
+        
+    
+        var popup_064118b1ed3bcab36ac7c1d6b537a222 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_03c9579a4ad1ad4d357555f585f1cb3f = $(`<div id="html_03c9579a4ad1ad4d357555f585f1cb3f" style="width: 100.0%; height: 100.0%;"><strong>Prologis Santana de Parnaíba</strong></div>`)[0];
+            popup_064118b1ed3bcab36ac7c1d6b537a222.setContent(html_03c9579a4ad1ad4d357555f585f1cb3f);
+        
+
+        marker_b6ca5b811b824857f82cd905b3ff6540.bindPopup(popup_064118b1ed3bcab36ac7c1d6b537a222)
+        ;
+
+        
+    
+    
+            var feature_group_f4611dc5701b70632d9e6be2032cf48b = L.featureGroup(
+                {}
+            ).addTo(map_4fa776d771e84ef649cedd6503d2c2cb);
+        
+    
+            var poly_line_d06b406629610614a2a1ab29c0a65f88 = L.polyline(
+                [[-23.3972, -47.0028], [-23.3561, -46.8769]],
+                {"bubblingMouseEvents": true, "color": "#FF5733", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#FF5733", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(feature_group_f4611dc5701b70632d9e6be2032cf48b);
+        
+    
+            poly_line_d06b406629610614a2a1ab29c0a65f88.bindTooltip(
+                `<div>
+                     Linha CPTM
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_daa9a777630036eb61dc631256c57897 = L.polyline(
+                [[-23.3561, -46.8769], [-23.5106, -46.8761]],
+                {"bubblingMouseEvents": true, "color": "#FF5733", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#FF5733", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(feature_group_f4611dc5701b70632d9e6be2032cf48b);
+        
+    
+            poly_line_daa9a777630036eb61dc631256c57897.bindTooltip(
+                `<div>
+                     Linha CPTM
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_40340cd036b993fdd77889d6b03afb5a = L.polyline(
+                [[-23.5106, -46.8761], [-23.5275, -46.6681]],
+                {"bubblingMouseEvents": true, "color": "#FF5733", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#FF5733", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(feature_group_f4611dc5701b70632d9e6be2032cf48b);
+        
+    
+            poly_line_40340cd036b993fdd77889d6b03afb5a.bindTooltip(
+                `<div>
+                     Linha CPTM
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var feature_group_5550a9993f483b85902756343d7d8404 = L.featureGroup(
+                {}
+            ).addTo(map_4fa776d771e84ef649cedd6503d2c2cb);
+        
+    
+            var poly_line_68bdb761d1b9e4574b0dbe2c190d7ada = L.polyline(
+                [[-23.5106, -46.8761], [-23.495, -46.851]],
+                {"bubblingMouseEvents": true, "color": "#9B59B6", "dashArray": "5, 5", "dashOffset": null, "fill": false, "fillColor": "#9B59B6", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2.5}
+            ).addTo(feature_group_5550a9993f483b85902756343d7d8404);
+        
+    
+            poly_line_68bdb761d1b9e4574b0dbe2c190d7ada.bindTooltip(
+                `<div>
+                     VLT
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_183563a592a0865c296f216ac34b61c0 = L.polyline(
+                [[-23.354, -46.8795], [-23.3561, -46.8769]],
+                {"bubblingMouseEvents": true, "color": "#9B59B6", "dashArray": "5, 5", "dashOffset": null, "fill": false, "fillColor": "#9B59B6", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2.5}
+            ).addTo(feature_group_5550a9993f483b85902756343d7d8404);
+        
+    
+            poly_line_183563a592a0865c296f216ac34b61c0.bindTooltip(
+                `<div>
+                     VLT
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var feature_group_9adc85faa1409204ad542d73b2b95712 = L.featureGroup(
+                {}
+            ).addTo(map_4fa776d771e84ef649cedd6503d2c2cb);
+        
+    
+            var poly_line_4461143af50d97b2568e6452b8bd0f93 = L.polyline(
+                [[-23.495, -46.851], [-23.4439, -46.9231]],
+                {"bubblingMouseEvents": true, "color": "#27AE60", "dashArray": "2, 6", "dashOffset": null, "fill": false, "fillColor": "#27AE60", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 1.5}
+            ).addTo(feature_group_9adc85faa1409204ad542d73b2b95712);
+        
+    
+            poly_line_4461143af50d97b2568e6452b8bd0f93.bindTooltip(
+                `<div>
+                     Ciclovia
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_1dd773a90f23059b0b26722c691428a1 = L.polyline(
+                [[-23.354, -46.8795], [-23.3561, -46.8769]],
+                {"bubblingMouseEvents": true, "color": "#27AE60", "dashArray": "2, 6", "dashOffset": null, "fill": false, "fillColor": "#27AE60", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 1.5}
+            ).addTo(feature_group_9adc85faa1409204ad542d73b2b95712);
+        
+    
+            poly_line_1dd773a90f23059b0b26722c691428a1.bindTooltip(
+                `<div>
+                     Ciclovia
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var layer_control_3259c0c6bd59dcdb87c042d071545aab = {
+                base_layers : {
+                    "cartodbpositron" : tile_layer_802fdbf0fa7828df75c8bc85abec3b81,
+                },
+                overlays :  {
+                    "Centros Log\u00edsticos Prologis" : feature_group_6019d6d3e5b3943e8f70cef822aaaee3,
+                    "Transporte P\u00fablico" : feature_group_f4611dc5701b70632d9e6be2032cf48b,
+                    "VLTs" : feature_group_5550a9993f483b85902756343d7d8404,
+                    "Ciclovias" : feature_group_9adc85faa1409204ad542d73b2b95712,
+                },
+            };
+            L.control.layers(
+                layer_control_3259c0c6bd59dcdb87c042d071545aab.base_layers,
+                layer_control_3259c0c6bd59dcdb87c042d071545aab.overlays,
+                {"autoZIndex": true, "collapsed": false, "position": "topright"}
+            ).addTo(map_4fa776d771e84ef649cedd6503d2c2cb);
+        
+</script>
+</html>
